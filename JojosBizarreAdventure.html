@@ -47,6 +47,8 @@
       width: 100%;
       height: 260px;
       object-fit: cover;
+      -webkit-user-drag: none;
+      user-drag: none;
     }
 
     .part1 { border-color: #3144af; }
@@ -72,7 +74,7 @@
 
     <!-- PART 1 -->
     <div class="part-card part1" onclick="openPart('https://penyu444.github.io/PhantomBloodStorage/PhantomBlood.html')">
-      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part1_cover.png">
+      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part1_cover.png" draggable="false">
       <div class="part-info">
         <div class="part-title">Part 1: Phantom Blood</div>
         <div class="part-subtitle">Jonathan Joestar</div>
@@ -81,7 +83,7 @@
 
     <!-- PART 2 -->
     <div class="part-card part2" onclick="openPart('https://penyu444.github.io/BattleTendencyStorage/BattleTendency.html')">
-      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part2_cover.png">
+      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part2_cover.png" draggable="false">
       <div class="part-info">
         <div class="part-title">Part 2: Battle Tendency</div>
         <div class="part-subtitle">Joseph Joestar</div>
@@ -90,7 +92,7 @@
 
     <!-- Other parts missing yet -->
     <div class="part-card part3" onclick="alert('https://penyu444.github.io/StardustCrusadersStorage/StardustCrusaders.html')">
-      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part3_cover.png">
+      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part3_cover.png" draggable="false">
       <div class="part-info">
         <div class="part-title">Part 3: Stardust Crusaders</div>
         <div class="part-subtitle">Kujo Jotaro</div>
@@ -98,7 +100,7 @@
     </div>
 
     <div class="part-card part4" onclick="alert('https://penyu444.github.io/DiamondIsUnbreakableStorage/DiamondIsUnbreakable.html')">
-      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part4_cover.png">
+      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part4_cover.png" draggable="false">
       <div class="part-info">
         <div class="part-title">Part 4: Diamond is Unbreakable</div>
         <div class="part-subtitle">Higashikata Josuke</div>
@@ -106,7 +108,7 @@
     </div>
 
     <div class="part-card part5" onclick="alert('https://penyu444.github.io/VentoAureoStorage/VentoAureo.html')">
-      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part5_cover.png">
+      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part5_cover.png" draggable="false">
       <div class="part-info">
         <div class="part-title">Part 5: Vento Aureo</div>
         <div class="part-subtitle">Giorno Giovanna</div>
@@ -114,7 +116,7 @@
     </div>
 
     <div class="part-card part6" onclick="alert('https://penyu444.github.io/StoneOceanStorage/StoneOcean.html')">
-      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part6_cover.png">
+      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part6_cover.png"draggable="false">
       <div class="part-info">
         <div class="part-title">Part 6: Stone Ocean</div>
         <div class="part-subtitle">Jolyne Kujo</div>
@@ -122,7 +124,7 @@
     </div>
 
     <div class="part-card part7" onclick="alert('https://penyu444.github.io/SteelBallRunStorage/SteelBallRun.html')">
-      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part7_cover.png">
+      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part7_cover.png" draggable="false">
       <div class="part-info">
         <div class="part-title">Part 7: Steel Ball Run</div>
         <div class="part-subtitle">Johnny Joestar</div>
@@ -130,7 +132,7 @@
     </div>
 
     <div class="part-card part8" onclick="alert('https://penyu444.github.io/JojolionStorage/Jojolion.html')">
-      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part8_cover.png">
+      <img src="https://penyu444.github.io/JojosBizarreAdventureStorage/part8_cover.png" draggable="false">
       <div class="part-info">
         <div class="part-title">Part 8: JoJolion</div>
         <div class="part-subtitle">Higashikata Josuke</div>
@@ -147,6 +149,8 @@
     function openPart(url) {
       window.location.href = url;
     }
+    document.addEventListener("dragstart", (e) => e.preventDefault());
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
   </script>
 
 </body>
